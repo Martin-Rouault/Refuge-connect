@@ -1,5 +1,3 @@
-@props(['id', 'photo', 'name', 'species', 'age', 'description'])
-
 <article @style([
     'background-color: #ffffff',
     'border-radius: 20px',
