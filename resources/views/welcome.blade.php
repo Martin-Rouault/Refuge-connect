@@ -15,11 +15,12 @@
 
 <section @style([
     'display: grid',
-    'grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))',
-    'gap: 1.5rem',
+    'grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))',
+    'gap: 2rem',
     'padding: 1.5rem',
-    'max-width: 1280px',
-    'margin: 0 auto'
+    'max-width: 1100px',
+    'margin: 0 auto',
+    'justify-items: center'
 ])>
     @foreach ($animals as $animal)
         <x-animal

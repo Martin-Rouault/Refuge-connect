@@ -8,14 +8,15 @@
 <section @style([
     'display: flex',
     'flex-direction: row',
-    'justify-content: center',
-    'gap: 20px'
+    'margin: 0 auto',
+    'gap: 20px',
+    'max-width: 880px'
 ])>
-        <img @style(['width: 300px']) src="{{ $animal->photo }}" alt="{{ $animal->name }}"></img>
-        <article @style(['display: flex', 'flex-direction: column', 'gap: 20px'])>
-            <p><span class="font-semibold">Espèce :</span> {{ $animal->species }}</p>
-            <p><span class="font-semibold">Âge :</span> {{ $animal->age }}</p>
-            <p><span class="font-semibold">Description :</span> {{ $animal->description }}</p>
+        <img @style(['width: 300px']) src="{{ asset($animal->photo) }}" alt="{{ $animal->name }}"></img>
+        <article @style(['display: flex', 'flex-direction: column', 'gap: 50px'])>
+            <p @style(['font-size: 20px'])><span>Espèce :</span> {{ $animal->species }}</p>
+            <p @style(['font-size: 20px'])><span>Age :</span> {{ $animal->age }} ans</p>
+            <p @style(['font-size: 20px'])><span></span> {{ $animal->description }}</p>
         </article>
 </section>
 @endsection
