@@ -17,25 +17,11 @@ class AnimalController extends Controller
     {
         Animal::upsert([
             [
-                "name" => "Bella",
+                "name" => "Coquillette",
                 "species" => "Chien",
-                "age" => 5,
-                "description" => "Une labrador joueuse et affectueuse qui adore la compagnie.",
-                "photo" => "/images/animaux/bella.png",
-            ],
-            [
-                "name" => "Luna",
-                "species" => "Chat",
                 "age" => 3,
-                "description" => "Une chatte calme et câline qui aime les endroits tranquilles.",
-                "photo" => "/images/animaux/luna.png",
-            ],
-            [
-                "name" => "Max",
-                "species" => "Chien",
-                "age" => 2,
-                "description" => "Un jeune chiot plein d’énergie qui adore courir et jouer dehors.",
-                "photo" => "/images/animaux/max.png",
+                "description" => "Une Shiba Inu vive et joyeuse, toujours prête à jouer et à explorer. Coquillette est curieuse, intelligente et très expressive, avec un petit caractère indépendant mais plein de tendresse pour ceux qu’elle aime.",
+                "photo" => "/images/animaux/coquillette.png",
             ],
         ], uniqueBy: ['name', 'species', 'age', 'description', 'photo']);
 

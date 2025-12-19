@@ -1,23 +1,58 @@
 @props(['id', 'photo', 'name', 'species', 'age', 'description'])
 
-<article class="bg-white rounded-[20px] p-2.5 shadow-sm">
+<article @style([
+    'background-color: #ffffff',
+    'border-radius: 20px',
+    'padding: 10px',
+    'box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+])>
     <a href="{{ route('animal.details', ['id' => $id]) }}">
-        <img src="{{ $photo }}" alt="{{ $name }}" class="rounded-2xl" />
+        <img src="{{ $photo }}" alt="{{ $name }}" @style([
+            'border-radius: 16px',
+            'width: 100%',
+            'display: block',
+        ]) />
     </a>
 
-    <h2 class="text-xl font-bold mt-2">{{ $name }}</h2>
+    <h2 @style([
+        'font-size: 1.25rem',
+        'font-weight: 700',
+        'margin-top: 8px',
+    ])>
+        {{ $name }}
+    </h2>
 
-        <p><span class="font-semibold">Espèce :</span> {{ $species }}</p>
-        <p><span class="font-semibold">Âge :</span> {{ $age }}</p>
-        <p><span class="font-semibold">Description :</span> {{ $description }}</p>
+    <p @style(['margin: 4px 0'])>
+        <span @style(['font-weight: 600'])>Espèce :</span> {{ $species }}
+    </p>
 
-    <div class="mt-4 flex items-center gap-4">
-        <a href="{{ route('animals.update', ['id' => $id ]) }}"
-           class="text-[#52c9ff] no-underline font-medium">
+    <p @style(['margin: 4px 0'])>
+        <span @style(['font-weight: 600'])>Âge :</span> {{ $age }}
+    </p>
+
+    <p @style(['margin: 4px 0'])>
+        <span @style(['font-weight: 600'])>Description :</span> {{ $description }}
+    </p>
+
+    <div @style([
+        'margin-top: 16px',
+        'display: flex',
+        'align-items: center',
+        'gap: 16px',
+    ])>
+        <a href="{{ route('animals.update', ['id' => $id]) }}" @style([
+            'color: #52c9ff',
+            'text-decoration: none',
+            'font-weight: 500',
+        ])>
             Modifier
         </a>
-        <a href="{{ route('animals.delete', ['id' => $id ]) }}"
-           class="text-[#52c9ff] no-underline font-medium">
+
+        <a href="{{ route('animals.delete', ['id' => $id]) }}" @style([
+            'color: #52c9ff',
+            'text-decoration: none',
+            'font-weight: 500',
+        ])>
             Supprimer
         </a>
     </div>

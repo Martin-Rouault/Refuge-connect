@@ -4,10 +4,25 @@
 
 @section('content')
 
-<h1 class="text-center mb-5 text-4xl font-bold">Nos animaux</h1>
-<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-7xl m-auto">
+<h1 @style([
+    'text-align: center',
+    'margin-bottom: 3rem',
+    'font-size: 2.25rem',
+    'font-weight: 700'
+])>
+    Nos animaux
+</h1>
+
+<section @style([
+    'display: grid',
+    'grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))',
+    'gap: 1.5rem',
+    'padding: 1.5rem',
+    'max-width: 1280px',
+    'margin: 0 auto'
+])>
     @foreach ($animals as $animal)
-    <x-animal
+        <x-animal
             :id="$animal->id"
             :photo="$animal->photo"
             :name="$animal->name"

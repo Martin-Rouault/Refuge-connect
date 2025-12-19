@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('species');
-            $table->string('description');
+            $table->text('description');
             $table->integer('age');
             $table->string('photo');
         });

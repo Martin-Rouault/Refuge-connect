@@ -4,6 +4,6 @@
 
 @section('content')
 
-<h1 class="text-center mb-5 text-4xl font-bold">Page non trouvée</h1>
+<h1 @style(['text-align: center', 'margin-bottom: 20px', 'font-size: 36px', 'font-weight: bold'])>Page non trouvée</h1>
 
 @endsection
